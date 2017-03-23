@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../navbar';
+import { URL } from '../constant';
 
 class Home extends React.Component {
   constructor(props) {
@@ -11,19 +13,11 @@ class Home extends React.Component {
   }
 
   render() {
+    const { HOME } = URL;
+
     return (
       <div className="home">
-        <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            <Link to="components">
-              Components
-            </Link>
-          </li>
-        </ul>
-        {this.state.content}
+        <NavBar url={HOME} />
       </div>
     );
   }

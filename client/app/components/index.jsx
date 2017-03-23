@@ -1,30 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../navbar';
+import { URL } from '../constant';
 
 class Components extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      content: "This is Components page"
-    };
   }
 
   render() {
+    const { COMPONENTS } = URL;
     return (
       <div >
-        <ul>
-          <li>
-            <Link to="/home">
-              Home
-            </Link>
-          </li>
-          <li>
-            Components
-          </li>
-        </ul>
-        <p>{this.state.content}</p>
-        <img src="/client/image/test.gif" />
+        <NavBar url={COMPONENTS} />
       </div>
     );
   }
