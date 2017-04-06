@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../navbar';
-import { URL } from '../constant';
+import { URL } from '../../constant';
 
 class Components extends React.Component {
   constructor(props) {
@@ -12,7 +11,6 @@ class Components extends React.Component {
     const { COMPONENTS } = URL;
     return (
       <div >
-        <NavBar url={COMPONENTS} />
       </div>
     );
   }

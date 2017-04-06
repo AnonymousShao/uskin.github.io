@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../navbar';
-import { URL } from '../constant';
+import { URL } from '../../constant';
 
 class Home extends React.Component {
   constructor(props) {
@@ -82,45 +81,17 @@ class Home extends React.Component {
     );
   }
 
-  getBottom() {
-    return (
-      <div className="bottom">
-        <div className="github-area">
-          <p className="github-header">
-            <img className="icon-github" src="/client/image/icon-github.png" />
-            GitHub
-          </p>
-          <ul className="github-links">
-            <li>
-              <div>Repository</div>
-            </li>
-            <li>
-              <div>Releases Note</div>
-            </li>
-            <li>
-              <div>Report Bug</div>
-            </li>
-          </ul>
-        </div>
-        <p className="license">Copyright © 2017 MIT License</p>
-      </div>
-    );
-  }
-
   render() {
     const { HOME } = URL;
     const WelcomePage = this.getWelcomPage;
     const ContentPage = this.getContentPage;
     const BottomPage = this.getBottomPage;
-    const Bottom = this.getBottom;
 
     return (
-      <div className="home">
-        <NavBar url={HOME} />
+      <div className="site-home">
         <WelcomePage />
         <ContentPage />
         <BottomPage />
-        <Bottom />
       </div>
     );
   }

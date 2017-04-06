@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const AutoPrefixer = require('autoprefixer');
 
 module.exports = {
-  entry: './client/app/index.jsx',
+  entry: ['./client/app/index.jsx'],
   output: {
     path: './client/dist',
     filename: 'bundle.js'
@@ -22,6 +22,9 @@ module.exports = {
       test: /\.less/,
       exclude: /node_modules/,
       loader: ExtractTextPlugin.extract('style', 'css!postcss!less?sourceMap')
+    }, {
+      test: /\.md/,
+      loader: 'markdown'
     }]
   },
   plugins: [
