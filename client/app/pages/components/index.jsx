@@ -1,19 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { URL } from '../../constant';
+import Switch from './Switch';
 
-class Components extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { COMPONENTS } = URL;
-    return (
-      <div >
-      </div>
-    );
-  }
-}
+const Components = {
+  Switch
+};
 
 export default Components;

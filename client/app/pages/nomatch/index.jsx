@@ -8,7 +8,7 @@ class NoMatch extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: '#fff' }}>
         <p>
           {
             'There is no match url. Go to '

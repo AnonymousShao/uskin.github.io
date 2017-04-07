@@ -1,8 +1,10 @@
-import Specification from './specification';
-import Customized from './customized';
+import Spec from './Spec';
+import Color from './Color';
+import Customized from './Customized';
 
 const Design = {
-  Specification,
+  Spec,
+  Color,
   Customized
 };
 
