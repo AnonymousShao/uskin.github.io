@@ -4,7 +4,7 @@ import { URL } from '../../constant';
 import getPage from '../../common/getPage';
 import insertHTML from '../../common/insertHTML';
 import Markdown from '../../../docs/components/switch/index.md';
-import Demo_Basic_js from '../../../docs/components/switch/basic.js';
+// import Demo_Basic_js from '../../../docs/components/switch/basic.js';
 
 class Switch extends React.Component {
   constructor(props) {

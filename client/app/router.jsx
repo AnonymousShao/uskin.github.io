@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { NavBar, Bottom } from './common';
-import { Home, Design, Components, NoMatch } from './pages';
+import { Home, Design, Components, About, NoMatch } from './pages';
 import { URL } from './constant';
-import hljs from 'highlight.js';
+// import hljs from 'highlight.js';
 require('../style/index.less');
 
 class Model extends React.Component {
@@ -11,9 +11,9 @@ class Model extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    hljs.initHighlightingOnLoad();
-  }
+  // componentDidMount() {
+  //   hljs.initHighlightingOnLoad();
+  // }
 
   render() {
     return (
@@ -29,6 +29,8 @@ class Model extends React.Component {
             <Route path={URL.DESIGN_CUSTOMIZED} component={Design.Customized} />
             <Redirect exact from={URL.COMPONENTS} to={URL.COMPONENTS_SWITCH} />
             <Route path={URL.COMPONENTS_SWITCH} component={Components.Switch} />
+            <Redirect exact from={URL.ABOUT} to={URL.ABOUT_MEMBERS} />
+            <Route path={URL.ABOUT_MEMBERS} component={About.Members} />
             <Route component={NoMatch} />
           </Switch>
           <Bottom />

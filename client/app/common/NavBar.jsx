@@ -7,9 +7,14 @@ class NabVar extends React.Component {
     super(props);
   }
 
+  getClassName(current) {
+    const category = window.location.pathname.split('/')[1];
+
+    return ('/' + category) === current ? 'selected' : '';
+  }
+
   render() {
-    const url = this.props.url;
-    const { HOME, DESIGN, COMPONENTS } = URL;
+    const { HOME, DESIGN, COMPONENTS, ABOUT } = URL;
 
     return (
       <div className="site-navbar">
@@ -18,9 +23,10 @@ class NabVar extends React.Component {
             <img src="/client/image/logo-navbar.png" />
           </div>
           <ul className="links">
-            <li className={url === HOME ? 'selected' : ''}><Link to={HOME}>首页</Link></li>
-            <li className={url === DESIGN ? 'selected' : ''}><Link to={DESIGN}>设计规范</Link></li>
-            <li className={url === COMPONENTS ? 'selected' : ''}><Link to={COMPONENTS}>组件</Link></li>
+            <li className={this.getClassName(HOME)}><Link to={HOME}>首页</Link></li>
+            <li className={this.getClassName(DESIGN)}><Link to={DESIGN}>设计规范</Link></li>
+            <li className={this.getClassName(COMPONENTS)}><Link to={COMPONENTS}>组件</Link></li>
+            <li className={this.getClassName(ABOUT)}><Link to={ABOUT}>关于我们</Link></li>
           </ul>
         </div>
       </div>
