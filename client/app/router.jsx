@@ -3,17 +3,12 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-d
 import { NavBar, Bottom } from './common';
 import { Home, Design, Components, About, NoMatch } from './pages';
 import { URL } from './constant';
-// import hljs from 'highlight.js';
 require('../style/index.less');
 
 class Model extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  // componentDidMount() {
-  //   hljs.initHighlightingOnLoad();
-  // }
 
   render() {
     return (

@@ -1,5 +1,5 @@
 ## Usage
-```js
+```jsx
 const {Switch} = uskin;
 
 ReactDOM.render(

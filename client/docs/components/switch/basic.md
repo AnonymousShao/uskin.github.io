@@ -1,4 +1,4 @@
-```
+```jsx
 <Switch
     onChange={listener}
     labelOn="ON"
