@@ -7,7 +7,7 @@ class Menu extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, selected } = this.props;
 
     return (
       <div className="site-menu">
@@ -15,7 +15,9 @@ class Menu extends React.Component {
           <div key={index} className="site-menu-block">
             <div className="site-menu-title">{d.title}</div>
             <ul className="site-menu-links">
-              {d.links.map((link, i) => <li key={i}><Link to={link.link}>{link.data}</Link></li>)}
+              {d.links.map((link, i) =>
+                <li key={i} className={selected === link.link ? 'selected' : ''}><Link to={link.link}>{link.data}</Link></li>
+              )}
             </ul>
           </div>
         )}

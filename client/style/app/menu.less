@@ -14,6 +14,7 @@
     > .site-menu-title {
       font-size: 18px;
       margin-bottom: .5em;
+      color: #333333
     }
 
     > ul.site-menu-links {
@@ -22,6 +23,15 @@
         font-size: 14px;
         line-height: 1.6em;
         height: 1.6em;
+        > a {
+          color: #666666;
+          &:hover {
+            color: #10afe6;
+          }
+        }
+        &.selected > a {
+          color: #10afe6;
+        }
       }
     }
   }

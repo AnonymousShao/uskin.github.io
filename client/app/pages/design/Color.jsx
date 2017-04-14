@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from '../../common/Menu';
 import menu from './menu';
+import { URL } from '../../constant';
 import getPage from '../../common/getPage';
 
 class Customized extends React.Component {
@@ -32,7 +32,7 @@ class Customized extends React.Component {
   }
 
   render() {
-    return getPage(menu, URL.DESIGN_SPEC, this.getContent());
+    return getPage(menu, URL.DESIGN_COLOR, this.getContent());
   }
 }
 

@@ -3,10 +3,10 @@ import menu from './menu';
 import { URL } from '../../constant';
 import getPage from '../../common/getPage';
 import insertHTML from '../../common/insertHTML';
-import Markdown from '../../../docs/components/switch/index.md';
+import Markdown from '../../../docs/components/panel/index.md';
 import highlight from '../../common/highlight';
 
-class Switch extends React.Component {
+class Panel extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -16,8 +16,8 @@ class Switch extends React.Component {
   }
 
   render() {
-    return getPage(menu, URL.COMPONENTS_SWITCH, insertHTML(Markdown));
+    return getPage(menu, URL.COMPONENTS_PANEL, insertHTML(Markdown));
   }
 }
 
-export default Switch;
+export default Panel;
