@@ -11,7 +11,7 @@ class Members extends React.Component {
   }
 
   render() {
-    return getPage(menu, URL.DESIGN_SPEC, insertHTML(Markdown));
+    return getPage(menu, URL.ABOUT_MEMBERS, insertHTML(Markdown));
   }
 }
 
