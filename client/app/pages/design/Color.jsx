@@ -22,6 +22,14 @@ class Customized extends React.Component {
         <br/>
         <h2>调色板</h2>
         <h4>主题：Info Color</h4>
+        <ul className="design-color-pallet">
+          <li style={{ backgroundColor: '#10afe6' }}>#10afe6</li>
+          <li style={{ backgroundColor: '#eeeeee' }}>eeeeee</li>
+          <li style={{ backgroundColor: '#fffeff' }}>eeeeee</li>
+          <li style={{ backgroundColor: '#aaaaaa' }}>eeeeee</li>
+          <li className="dark" style={{ backgroundColor: '#333333' }}>eeeeee</li>
+          <li style={{ backgroundColor: '#666666' }}>eeeeee</li>
+        </ul>
         <h4>成功：Success Color</h4>
         <h4>危险：Danger Color</h4>
         <h4>警告：Warning Color</h4>

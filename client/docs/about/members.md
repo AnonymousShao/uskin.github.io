@@ -2,11 +2,15 @@
 
 #### Authors
 
-**Lee Yao**
+**Lee Yao (Author)**
 
-- Weibo: <http://weibo.com/icecreamliker>
-- Email: yaoli111144@gmail.com
+yaoli111144@gmail.com
 
-**Sonia Xu**
+**Sonia Xu (Core Developer)**
 
-- Email: soniaxu7@foxmail.com
+soniaxu7@foxmail.com
+
+**Moon (Designer)**
+
+yueliang@unitedstack.com
+
