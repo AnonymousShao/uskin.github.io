@@ -1,0 +1,64 @@
+- id: home
+  nav: 
+  link:
+  title: 首页
+  items:
+- id: design
+  nav: design
+  link: /spec
+  title: 设计规范
+  items:
+    - id: spec
+      title: 设计规范
+    - id: customized
+      title: 配色方案
+    - id: color
+      title: 自定义配色
+- id: components
+  nav: components
+  link: /breadcrumb
+  title: 组件
+  items:
+    - id: breadcrumb
+      title: Breadcrumb
+    - id: button
+      title: Button
+    - id: button-group
+      title: Button Group
+    - id: dropdown
+      title: Dropdown
+    - id: dropdown-button
+      title: Dropdown Button
+    - id: input-number
+      title: Input Number
+    - id: input-search
+      title: Input Search
+    - id: menu
+      title: Menu
+    - id: notification
+      title: Notification
+    - id: pagination
+      title: Pagination
+    - id: panel
+      title: Panel
+    - id: slider
+      title: Slider
+    - id: step
+      title: Step
+    - id: switch
+      title: Switch
+    - id: tab
+      title: Tab
+    - id: table
+      title: Table
+    - id: tip
+      title: Tip
+    - id: tooltip
+      title: Tooltip
+- id: about
+  nav: about
+  link: /members
+  title: 关于我们 
+  items:
+    - id: members
+      title: 团队介绍

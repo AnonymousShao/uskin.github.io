@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>USkin</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/image/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/css/index.css" type="text/css">
+  <link rel="stylesheet" href="/assets/css/syntax.css" type="text/css">
+</head>
+<body>
+  <div class="site-navbar">
+  <div class="content">
+    <div class="logo-field">
+      <a href="/">
+        <img src="/assets/image/logo-navbar.png" />
+      </a>
+    </div>
+    <ul class="links">
+      
+        <li >
+          <a href=/>首页</a>
+        </li>
+      
+        <li >
+          <a href=/design/spec>设计规范</a>
+        </li>
+      
+        <li  class="selected" >
+          <a href=/components/breadcrumb>组件</a>
+        </li>
+      
+        <li >
+          <a href=/about/members>关于我们</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+  <div class="site-page">
+  <div class="site-page-inner">
+    <div class="site-menu">
+  
+    
+  
+    
+  
+    
+      <div class="site-menu-block">
+        <div class="site-menu-title">
+          组件
+        </div>
+        <ul class="site-menu-links">
+          
+            <li >
+              <a href=/components/breadcrumb>Breadcrumb</a>
+            </li>
+          
+            <li >
+              <a href=/components/button>Button</a>
+            </li>
+          
+            <li >
+              <a href=/components/button-group>Button Group</a>
+            </li>
+          
+            <li >
+              <a href=/components/dropdown>Dropdown</a>
+            </li>
+          
+            <li >
+              <a href=/components/dropdown-button>Dropdown Button</a>
+            </li>
+          
+            <li >
+              <a href=/components/input-number>Input Number</a>
+            </li>
+          
+            <li >
+              <a href=/components/input-search>Input Search</a>
+            </li>
+          
+            <li >
+              <a href=/components/menu>Menu</a>
+            </li>
+          
+            <li >
+              <a href=/components/notification>Notification</a>
+            </li>
+          
+            <li >
+              <a href=/components/pagination>Pagination</a>
+            </li>
+          
+            <li >
+              <a href=/components/panel>Panel</a>
+            </li>
+          
+            <li >
+              <a href=/components/slider>Slider</a>
+            </li>
+          
+            <li >
+              <a href=/components/step>Step</a>
+            </li>
+          
+            <li >
+              <a href=/components/switch>Switch</a>
+            </li>
+          
+            <li >
+              <a href=/components/tab>Tab</a>
+            </li>
+          
+            <li  class="selected" >
+              <a href=/components/table>Table</a>
+            </li>
+          
+            <li >
+              <a href=/components/tip>Tip</a>
+            </li>
+          
+            <li >
+              <a href=/components/tooltip>Tooltip</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  
+    
+  
+</div>
+
+    <div class="site-content">
+      <h2 id="usage">Usage</h2>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">column</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'ID'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="s1">'number'</span><span class="p">,</span>
+  <span class="na">filter</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'id大于等于4'</span><span class="p">,</span>
+    <span class="na">key</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">,</span>
+    <span class="na">filter</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">},</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'id小于4'</span><span class="p">,</span>
+    <span class="na">key</span><span class="p">:</span> <span class="s1">'2'</span><span class="p">,</span>
+    <span class="na">filter</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}]</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Category'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'category'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'category'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="s1">'string'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Flavor'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'flavor'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'flavor'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="s1">'string'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Level'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'level'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'level'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item1</span><span class="p">,</span> <span class="nx">item2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">weight</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'First Level'</span><span class="p">,</span> <span class="s1">'Second Level'</span><span class="p">,</span> <span class="s1">'Third Level'</span><span class="p">,</span> <span class="s1">'Fourth Level'</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">weight</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item1</span><span class="p">.</span><span class="nx">level</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">weight</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item2</span><span class="p">.</span><span class="nx">level</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">weight</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item1</span><span class="p">.</span><span class="nx">level</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nx">weight</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item2</span><span class="p">.</span><span class="nx">level</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'CPU'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'cpu'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'cpu'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="s1">'number'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Price'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'price'</span><span class="p">,</span>
+  <span class="na">dataIndex</span><span class="p">:</span> <span class="s1">'price'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="s1">'number'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Double Price'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'double_price'</span><span class="p">,</span>
+  <span class="na">sortBy</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item1</span><span class="p">,</span> <span class="nx">item2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">item1</span><span class="p">.</span><span class="nx">price</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="nx">item2</span><span class="p">.</span><span class="nx">price</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">item1</span><span class="p">.</span><span class="nx">price</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="nx">item2</span><span class="p">.</span><span class="nx">price</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">col</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=&gt;</span><span class="p">{</span><span class="nx">item</span><span class="p">.</span><span class="nx">price</span> <span class="o">*</span> <span class="mi">2</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div&gt;</span><span class="err">;
+</span>  <span class="p">}</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">title</span><span class="p">:</span> <span class="s1">'Data Print'</span><span class="p">,</span>
+  <span class="na">key</span><span class="p">:</span> <span class="s1">'print'</span><span class="p">,</span>
+  <span class="na">printData</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">col</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'event:'</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="s1">'GET COLUMN:'</span><span class="p">,</span> <span class="nx">col</span><span class="p">,</span> <span class="s1">' DATA:'</span><span class="p">,</span> <span class="nx">item</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">col</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Printing</span> <span class="nx">Disabled</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span> 
+        <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">printData</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">col</span><span class="p">,</span> <span class="nx">item</span><span class="p">)}</span><span class="o">&gt;</span><span class="p">{</span><span class="s1">'Print ID '</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}];</span>
+
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Micro-1'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Micro'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'First Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.056'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Standard-3'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Standard'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'Second Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'3'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.444'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Micro-2'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Micro'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'Third Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'5'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.056'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Standard-2'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Standard'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'Fourth Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'4'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.444'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Micro-3'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Micro'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'Second Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.056'</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">id</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+  <span class="na">category</span><span class="p">:</span> <span class="s1">'Standard-1'</span><span class="p">,</span>
+  <span class="na">flavor</span><span class="p">:</span> <span class="s1">'Standard'</span><span class="p">,</span>
+  <span class="na">level</span><span class="p">:</span> <span class="s1">'Third Level'</span><span class="p">,</span>
+  <span class="na">cpu</span><span class="p">:</span> <span class="s1">'7'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="s1">'0.444'</span>
+<span class="p">}];</span>
+
+<span class="kd">function</span> <span class="nx">checkboxOnClick</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">checkedData</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s1">'click triggered!'</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">checkedData</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">checkboxInitialize</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">item</span><span class="p">.</span><span class="nx">level</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="s1">'Second Level'</span><span class="p">)</span> <span class="p">?</span> <span class="kc">false</span> <span class="p">:</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">Table</span> 
+    <span class="nx">column</span><span class="o">=</span><span class="p">{</span><span class="nx">column</span><span class="p">}</span>
+    <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span>
+    <span class="nx">dataKey</span><span class="o">=</span><span class="s2">"id"</span>
+    <span class="nx">checkbox</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
+    <span class="nx">checkboxInitialize</span><span class="o">=</span><span class="p">{</span><span class="nx">checkboxInitialize</span><span class="p">}</span>
+    <span class="nx">checkboxOnClick</span><span class="o">=</span><span class="p">{</span><span class="nx">checkboxOnClick</span><span class="p">}</span>
+    <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">900</span><span class="p">}</span>
+    <span class="nx">striped</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
+    <span class="nx">hover</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="err">,
+</span>  <span class="nb">document</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="api">API</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 100px;">name</th>
+      <th style="width: 50px;">type</th>
+      <th style="width: 50px;">default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>items</td>
+      <td>Array</td>
+      <td></td>
+      <td><a href="#items">见下方items详解</a></td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>String</td>
+      <td></td>
+      <td>设置size="small"为small样式，否则为默认样式</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>items</strong></p>
+<table id="items">
+  <thead>
+    <tr>
+      <th style="width: 100px;">name</th>
+      <th style="width: 50px;">type</th>
+      <th style="width: 50px;">default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>column</td>
+      <td>Array</td>
+      <td></td>
+      <td><a href="#column">见下方column详解</a></td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td>Array</td>
+      <td></td>
+      <td>需要展示在table的数据信息</td>
+    </tr>
+    <tr>
+      <td>dataKey(必填)</td>
+      <td>String</td>
+      <td></td>
+      <td>data的唯一key值的列，例如每个data元素中的id值</td>
+    </tr>
+    <tr>
+      <td>checkbox</td>
+      <td>Boolean</td>
+      <td></td>
+      <td>是否附带checkbox</td>
+    </tr>
+    <tr>
+      <td>checkboxInitialize</td>
+      <td>Funtion</td>
+      <td></td>
+      <td>table初始化时指定选中的row</td>
+    </tr>
+    <tr>
+      <td>checkboxOnchange</td>
+      <td>Function</td>
+      <td></td>
+      <td>table中的checkbox被点击时返回信息Function(e, status, checkedData, data)，依次为被点击的DOM节点，被点击的状态，被点击的data元素信息，所有以选中的数据集合</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>Number</td>
+      <td></td>
+      <td>table的宽度</td>
+    </tr>
+    <tr>
+      <td>striped</td>
+      <td>Boolean</td>
+      <td>false</td>
+      <td>是否带striped样式</td>
+    </tr>
+    <tr>
+      <td>hover</td>
+      <td>Boolean</td>
+      <td>false</td>
+      <td>是否带hover样式</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>column</strong></p>
+<table id="column">
+  <thead>
+    <tr>
+      <th style="width: 100px;">name</th>
+      <th style="width: 50px;">type</th>
+      <th style="width: 50px;">default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>title</td>
+      <td>String</td>
+      <td></td>
+      <td>column的title</td>
+    </tr>
+    <tr>
+      <td>key</td>
+      <td>String</td>
+      <td></td>
+      <td>每个column的唯一key值</td>
+    </tr>
+    <tr>
+      <td>dataIndex</td>
+      <td>String</td>
+      <td></td>
+      <td>列数据在数据项中对应的key</td>
+    </tr>
+    <tr>
+      <td>render</td>
+      <td>Function</td>
+      <td></td>
+      <td>若想自定义列数据的样式或列数据的数据显示，设置render: function(col, item, index)，并返回DOM对象或String</td>
+    </tr>
+    <tr>
+      <td>sortBy</td>
+      <td>String</td>
+      <td></td>
+      <td>不设置则没有sort功能，若需要分类，sortBy可选值为number,boolean,date和string。若想自定义排序功能，sortBy: function(item1, item2)，返回值为1，0或-1</td>
+    </tr>
+    <tr>
+      <td>Filter</td>
+      <td>Array</td>
+      <td></td>
+      <td><a href="#filter">见下方filter详解</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>column: { filter: }</strong></p>
+<table id="filter">
+  <thead>
+    <tr>
+      <th style="width: 100px;">name</th>
+      <th style="width: 50px;">type</th>
+      <th style="width: 50px;">default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td></td>
+      <td>filter的title</td>
+    </tr>
+    <tr>
+      <td>key</td>
+      <td>String</td>
+      <td></td>
+      <td>每个filter的唯一key值</td>
+    </tr>
+    <tr>
+      <td>filter</td>
+      <td>Function</td>
+      <td></td>
+      <td>filter: function(item)返回true或false，表示是否符合筛选条件</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div>
+  <div class="site-bottom">
+  <div class="github-area">
+    <p class="github-header">
+      <img class="icon-github" src="/assets/image/icon-github.png" />  
+      <span>GitHub</span>
+    </p>
+    <ul class="github-links">
+      <li><a href="https://github.com/uskin/uskin">Repository</a></li>
+      <li><a href="https://github.com/icecreamliker/uskin/releases">Releases Note</a></li>
+      <li><a href="https://github.com/uskin/uskin/issues">Report Bug</a></li>
+    </ul>
+  </div>
+  <p class="license">Copyright © 2017 MIT License</p>
+</div>
+
+</div>
+</body>
+</html>

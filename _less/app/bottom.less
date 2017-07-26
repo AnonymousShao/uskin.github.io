@@ -1,0 +1,45 @@
+ @home_bottom_bg: #1e2f3d;
+ @home_bottom_license: #999999;
+
+.site-bottom {
+  width: 100%;
+  height: 200px;
+  background-color: @home_bottom_bg;
+  color: #fff;
+  text-align: center;
+
+  > .github-area {
+    opacity: .8;
+    .github-header {
+      margin: 0;
+      padding-top: 20px;
+      img {
+        position: relative;
+        top: 2px;
+        width: 20px;
+        margin-right: 4px;
+      }
+    }
+
+    a {
+      color: #fff;
+      display: inline-block;
+      height: 18px;
+      line-height: 18px;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    ul.github-links {
+      margin-top: 15px;
+    }
+  }
+
+  .license {
+    margin-top: 30px;
+    color: @home_bottom_license;
+  }
+}

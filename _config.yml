@@ -1,0 +1,14 @@
+name: USkin
+description: A Library of React Reusable Components
+url: uskin.github.io
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+  - fenced_code_blocks
+  - footnotes
+encoding: utf-8
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

@@ -1,0 +1,38 @@
+.getFixedWidth(@width) {
+  width: @width;
+  min-width: @width;
+  max-width: @width;
+}
+
+.site-menu {
+  flex: 1;
+  .getFixedWidth(200px);
+
+  > .site-menu-block {
+    padding-bottom: 20px;
+
+    > .site-menu-title {
+      font-size: 18px;
+      margin: 12px 0;
+      color: #333333
+    }
+
+    > ul.site-menu-links {
+      padding-left: 12px;
+      > li {
+        font-size: 14px;
+        line-height: 1.8em;
+        height: 1.8em;
+        > a {
+          color: #666666;
+          &:hover {
+            color: #10afe6;
+          }
+        }
+        &.selected > a {
+          color: #10afe6;
+        }
+      }
+    }
+  }
+}

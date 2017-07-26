@@ -1,0 +1,16 @@
+<div class="site-navbar">
+  <div class="content">
+    <div class="logo-field">
+      <a href="/">
+        <img src="/assets/image/logo-navbar.png" />
+      </a>
+    </div>
+    <ul class="links">
+      {% for nav in site.data.menu %}
+        <li {% if page.nav == nav.nav %} class="selected" {% endif %}>
+          <a href={{'/'}}{{nav.nav}}{{nav.link}}>{{nav.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,177 @@
+@home_bg: #1e2f3d;
+@home_button_green_bg: #2cbe49;
+@home_content_gray_bg: #eef1f1;
+@home_content_title: #333333;
+@home_content_text: #666666;
+
+.site-home {
+  width: 100%;
+  user-select: none; //test postcss
+
+  .welcome-page {
+    height: 600px; //test
+    background-color: @home_bg;
+    position: relative;
+
+    p.title {
+      margin: 0;
+      padding-top: 100px;
+      text-align: center;
+      > .head-title {
+        color: #fff;
+        font-size: 48px;
+        margin-right: 12px;
+      }
+      > .sub-title {
+        color: #fff;
+        opacity: .7;
+        font-size: 48px;
+      }
+    }
+
+    .btn-area {
+      margin-top: 40px;
+      text-align: center;
+      .button {
+        border-radius: 2px;
+        box-sizing: border-box;
+        font-size: 18px;
+        padding: 12px 24px;
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 2em;
+        }
+        > .icon-github {
+          position: relative;
+          top: 3px;
+          height: 1.4em;
+          margin-right: 6px;
+        }
+
+        &.button-green {
+          border: 1px solid @home_button_green_bg;
+          background-color: @home_button_green_bg;
+          color: #fff;
+          &:hover {
+            border-color: darken(@home_button_green_bg, 3%);
+            background-color: darken(@home_button_green_bg, 3%);
+          }
+        }
+        &.button-white {
+          border: 1px solid #fff;
+          color: #fff;
+          &:hover {
+            background-color: rgba(255,255,255,0.1);
+          }
+        }
+      }
+    }
+
+    .stuff-area {
+      @stuff-area-width: 900px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -@stuff-area-width/2;
+      width: @stuff-area-width;
+      height: 280px;
+
+      > .stuff {
+        position: absolute;
+
+        &.wp-coffee {
+          width: 70px;
+          top: 120px;
+          left: 60px;
+        }
+
+        &.wp-pencil {
+          width: 60px;
+          bottom: 0;
+          left: 200px;
+        }
+
+        &.wp-computer {
+          @stuff-area-computer-width: 320px;
+          width: @stuff-area-computer-width;
+          bottom: 0;
+          left: 50%;
+          margin-left: -@stuff-area-computer-width/2;
+        }
+
+        &.wp-hand {
+          @stuff-area-computer-width: 230px;
+          width: @stuff-area-computer-width;
+          bottom: 0;
+          left: 50%;
+          margin-left: -@stuff-area-computer-width/2;
+        }
+
+        &.wp-mouse {
+          width: 40px;
+          bottom: 20px;
+          right: 200px;
+        }
+
+        &.wp-paper {
+          width: 60px;
+          top: 60px;
+          right: 120px;
+        }
+      }
+    }
+  }
+
+  .content-page {
+    width: 100%;
+    
+    .content {
+      height: 600px;
+      width: 100%;
+
+      &.white-type {
+        background-color: #fff;
+      }
+
+      &.gray-type {
+        background-color: @home_content_gray_bg;
+      }
+      
+      > .inner {
+        width: 900px;
+        height: inherit;
+        margin: 0 auto;
+
+        > .img-area,
+        > .text-area {
+          float: left;
+          width: 50%;
+          height: inherit;
+          box-sizing: border-box;
+        }
+
+        > .img-area {
+          padding: 0 80px;
+          > img {
+            width: 240px;
+            height: 240px;
+            margin: 180px auto;
+          }
+        }
+
+        > .text-area {
+          padding: 220px 80px;
+          > p {
+            font-size: 24px;
+            color: @home_content_title;
+          }
+          > span {
+            font-size: 15px;
+            line-height: 1.5em;
+            color: @home_content_text;
+          }
+        }
+      }
+    }
+  }
+}

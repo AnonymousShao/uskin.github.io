@@ -1,0 +1,9 @@
+- title: 包罗万象
+  content: 提供丰富多样的组件和组件模式，页面功能全能覆盖、繁简模式切换自如。
+  img: home-content-puzzle.png
+- title: 挥洒自如
+  content: 大方简洁的扁平化设计，配合色彩自由定义，组件与页面整体风格浑然天成、相得益彰。
+  img: home-content-paint.png
+- title: 身量小巧
+  content: 使用不着痕迹，React模块结构清晰，完整的文档、用例和单元测试助力开发。
+  img: home-content-person.png

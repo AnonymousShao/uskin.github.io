@@ -1,0 +1,18 @@
+<div class="site-menu">
+  {% for section in site.data.menu %}
+    {% if page.nav == section.nav %}
+      <div class="site-menu-block">
+        <div class="site-menu-title">
+          {{section.title}}
+        </div>
+        <ul class="site-menu-links">
+          {% for item in section.items %}
+            <li {% if page.id == item.id %} class="selected" {% endif %}>
+              <a href={{'/'}}{{section.nav}}{{'/'}}{{item.id}}>{{item.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
